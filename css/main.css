@@ -1822,7 +1822,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffff6b;
+  background: #55ffe4;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2670,7 +2670,19 @@ body {
 }
 .gogit {
   position: fixed;
+  z-index: 999;
   border: none;
   right: 0;
   top: 0;
+}
+.brand {
+  width: 60px;
+  height: 130px;
+  border-radius: 50%;
+  text-indent: -9999px;
+  background-image: url("/images/avatar.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  opacity: 0.9 !important;
 }
