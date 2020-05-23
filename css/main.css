@@ -188,7 +188,7 @@ body {
   font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 14px;
   line-height: 2;
-  color: #555;
+  color: #f5f5f5;
   background: #fff;
 }
 @media (max-width: 767px) {
@@ -277,7 +277,7 @@ p {
   margin: 0 0 20px 0;
 }
 a {
-  color: #555;
+  color: #999;
   text-decoration: none;
   outline: none;
   border-bottom: 1px solid #999;
@@ -921,7 +921,7 @@ pre .javascript .function {
 }
 .post-body .tabs ul.nav-tabs li.tab.active a {
   cursor: default;
-  color: #555;
+  color: #999;
 }
 .post-body .tabs .tab-content {
   background-color: #fff;
@@ -967,7 +967,7 @@ pre .javascript .function {
   display: block;
   width: 22px;
   height: 2px;
-  background: #555;
+  background: #f5f5f5;
   border-radius: 1px;
 }
 .btn-bar+.btn-bar {
@@ -1136,7 +1136,7 @@ pre .javascript .function {
 .site-subtitle {
   margin-top: 10px;
   font-size: 13px;
-  color: #999;
+  color: #f5f5f5;
 }
 .use-motion .brand {
   opacity: 0;
@@ -1577,7 +1577,7 @@ pre .javascript .function {
   display: block;
   line-height: 25px;
   font-size: 14px;
-  color: #555;
+  color: #999;
   border-bottom: none;
 }
 .post-nav-item a:hover {
@@ -1942,7 +1942,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #fc63d7;
+  background: #4bd93b;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2786,7 +2786,10 @@ body {
   background-attachment: fixed;
   background-position: 26% 50%;
   background-size: cover;
-  color: #fff;
+}
+body p,
+span {
+  color: #fff !important;
 }
 .gogit {
   position: fixed;
@@ -2806,6 +2809,42 @@ body {
   background-position: 50% 50%;
   opacity: 0.9 !important;
 }
-.site-subtitle {
-  color: #fff;
+.post-meta,
+.post-title-link {
+  color: #fff !important;
+}
+.post-title-link:hover {
+  color: #808080 !important;
+}
+.footer {
+  color: #fff !important;
+}
+.vwrap {
+  border-color: #fff;
+  color: #fff !important;
+}
+.vinput {
+  border-color: #fff !important;
+  color: #fff !important;
+}
+.veditor {
+  color: #fff !important;
+}
+input::placeholder,
+textarea::placeholder {
+  color: #fff !important;
+}
+@media screen and (min-width: 550px) {
+  .music-contaner {
+    position: absolute;
+    left: 32%;
+    width: 35%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .music-contaner {
+    position: absolute;
+    left: 10%;
+    width: 80%;
+  }
 }
