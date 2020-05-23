@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="en">
+<html class="theme-next muse use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -85,7 +85,6 @@
 <meta property="og:url" content="http://yoursite.com/archives/index.html">
 <meta property="og:site_name" content="Sherry">
 <meta property="og:description" content="这是我的个人博客网站">
-<meta property="og:locale" content="en_US">
 <meta property="article:author" content="Liang Hao">
 <meta name="twitter:card" content="summary">
 
@@ -103,7 +102,7 @@
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     duoshuo: {
       userId: '0',
-      author: 'Author'
+      author: '博主'
     },
     algolia: {
       applicationID: '',
@@ -123,7 +122,7 @@
 
 
 
-  <title>Archive | Sherry</title>
+  <title>归档 | Sherry</title>
   
 
 
@@ -135,7 +134,7 @@
 
 <meta name="generator" content="Hexo 4.2.1"></head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
   
@@ -179,38 +178,38 @@
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-主页">
-          <a href="/%20" rel="section">
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            主页
+            首页
           </a>
         </li>
       
         
-        <li class="menu-item menu-item-文章">
-          <a href="/archives/%20" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            文章
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-关于我">
-          <a href="/me/%20" rel="section">
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
-            关于我
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
           </a>
         </li>
       
         
         <li class="menu-item menu-item-留言">
-          <a href="/write/%20" rel="section">
+          <a href="/write" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
@@ -250,7 +249,7 @@
         
           
         
-        Um..! 1 post. Keep on posting.
+        嗯..! 目前共计 1 篇日志。 继续努力。
       </span>
 
       
@@ -346,10 +345,10 @@
             
               <div class="site-state-item site-state-posts">
               
-                <a href="/archives">
+                <a href="/archives/%7C%7Carchive">
               
                   <span class="site-state-item-count">1</span>
-                  <span class="site-state-item-name">posts</span>
+                  <span class="site-state-item-name">日志</span>
                 </a>
               </div>
             
@@ -547,6 +546,28 @@
 
 
 
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: true,
+        notify: true,
+        appId: 'KWiVJ1wlhaKI9eKH97YkuuEp-gzGzoHsz',
+        appKey: 'BfMNgphbJqezTYSaYtb9eo7I',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 
