@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="搭建个人博客前面提到了有很多种，我采用的是 Hexo 静态博客，Next 主题。在这里 Hexo Next 就不做详细介绍了，官网地址戳这里 Hexo Next官方网站对安装与配置进行了详细的介绍，包括站点配置主题配置，后面我针对需要的部分进行配置与说明。下面是我搭建的详细过程。废话不多说开干~准备工作1.电脑以及拥有可用的系统，可上网，Windows、Linux、Mac Os 都可以">
+<meta property="og:type" content="article">
+<meta property="og:title" content="分享第一次建站的经历">
+<meta property="og:url" content="http://yoursite.com/2020/05/24/%E5%88%86%E4%BA%AB%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%BB%BA%E7%AB%99%E7%9A%84%E7%BB%8F%E5%8E%86/index.html">
+<meta property="og:site_name" content="Sherry">
+<meta property="og:description" content="搭建个人博客前面提到了有很多种，我采用的是 Hexo 静态博客，Next 主题。在这里 Hexo Next 就不做详细介绍了，官网地址戳这里 Hexo Next官方网站对安装与配置进行了详细的介绍，包括站点配置主题配置，后面我针对需要的部分进行配置与说明。下面是我搭建的详细过程。废话不多说开干~准备工作1.电脑以及拥有可用的系统，可上网，Windows、Linux、Mac Os 都可以">
+<meta property="og:image" content="http://yoursite.com/images%5C%E5%88%86%E4%BA%AB%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%BB%BA%E7%AB%99%E7%9A%84%E7%BB%8F%E5%8E%86%5C1.webp">
+<meta property="og:image" content="http://yoursite.com/images%5C%E5%88%86%E4%BA%AB%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%BB%BA%E7%AB%99%E7%9A%84%E7%BB%8F%E5%8E%86%5C2.webp">
+<meta property="og:image" content="http://yoursite.com/images%5C%E5%88%86%E4%BA%AB%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%BB%BA%E7%AB%99%E7%9A%84%E7%BB%8F%E5%8E%86%5C4.webp">
+<meta property="og:image" content="http://yoursite.com/images%5C%E5%88%86%E4%BA%AB%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%BB%BA%E7%AB%99%E7%9A%84%E7%BB%8F%E5%8E%86%5C3.webp">
+<meta property="og:image" content="http://yoursite.com/images%5C%E5%88%86%E4%BA%AB%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%BB%BA%E7%AB%99%E7%9A%84%E7%BB%8F%E5%8E%86%5C8.png">
+<meta property="og:image" content="http://yoursite.com/images%5C%E5%88%86%E4%BA%AB%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%BB%BA%E7%AB%99%E7%9A%84%E7%BB%8F%E5%8E%86%5C9.png">
+<meta property="og:image" content="http://yoursite.com/images%5C%E5%88%86%E4%BA%AB%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%BB%BA%E7%AB%99%E7%9A%84%E7%BB%8F%E5%8E%86%5C5.webp">
+<meta property="og:image" content="http://yoursite.com/images%5C%E5%88%86%E4%BA%AB%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%BB%BA%E7%AB%99%E7%9A%84%E7%BB%8F%E5%8E%86%5C6.webp">
+<meta property="og:image" content="http://yoursite.com/images%5C%E5%88%86%E4%BA%AB%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%BB%BA%E7%AB%99%E7%9A%84%E7%BB%8F%E5%8E%86%5C7.webp">
+<meta property="article:published_time" content="2020-05-24T08:46:49.000Z">
+<meta property="article:modified_time" content="2020-05-24T09:23:40.955Z">
+<meta property="article:author" content="Liang Hao">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/images%5C%E5%88%86%E4%BA%AB%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%BB%BA%E7%AB%99%E7%9A%84%E7%BB%8F%E5%8E%86%5C1.webp">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2020/05/24/分享第一次建站的经历/"/>
+
+
+
+
+
+  <title>分享第一次建站的经历 | Sherry</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+      <a href="https://github.com/you" target="_blank" rel="noopener" class="gogit"><img width="149" height="149" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_red_aa0000.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner" ><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Sherry</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">你好过客,欢迎来到我的个人世界！</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-简历">
+          <a href="/me/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            简历
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-留言">
+          <a href="/write" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            留言
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+   
+           <div class='music-contaner'>
+              <iframe  frameborder="no" border="0" marginwidth="0" marginheight="0" width="110" height="110" src="//music.163.com/outchain/player?type=2&id=4875769&auto=1&height=66"></iframe>
+           </div>
+   
+
+ </div>
+    </header>
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/24/%E5%88%86%E4%BA%AB%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%BB%BA%E7%AB%99%E7%9A%84%E7%BB%8F%E5%8E%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Liang Hao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sherry">
+    </span>
+
+    
+      <header class="post-header">
+        
+        
+          <h1 class="post-title" itemprop="name headline">分享第一次建站的经历</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-05-24T16:46:49+08:00">
+                2020-05-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2020/05/24/%E5%88%86%E4%BA%AB%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%BB%BA%E7%AB%99%E7%9A%84%E7%BB%8F%E5%8E%86/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/05/24/%E5%88%86%E4%BA%AB%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%BB%BA%E7%AB%99%E7%9A%84%E7%BB%8F%E5%8E%86/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h5 id="搭建个人博客前面提到了有很多种，我采用的是-Hexo-静态博客，Next-主题。在这里-Hexo-Next-就不做详细介绍了，官网地址戳这里-Hexo-Next官方网站对安装与配置进行了详细的介绍，包括站点配置主题配置，后面我针对需要的部分进行配置与说明。下面是我搭建的详细过程。废话不多说开干"><a href="#搭建个人博客前面提到了有很多种，我采用的是-Hexo-静态博客，Next-主题。在这里-Hexo-Next-就不做详细介绍了，官网地址戳这里-Hexo-Next官方网站对安装与配置进行了详细的介绍，包括站点配置主题配置，后面我针对需要的部分进行配置与说明。下面是我搭建的详细过程。废话不多说开干" class="headerlink" title="搭建个人博客前面提到了有很多种，我采用的是 Hexo 静态博客，Next 主题。在这里 Hexo Next 就不做详细介绍了，官网地址戳这里 Hexo Next官方网站对安装与配置进行了详细的介绍，包括站点配置主题配置，后面我针对需要的部分进行配置与说明。下面是我搭建的详细过程。废话不多说开干~"></a>搭建个人博客前面提到了有很多种，我采用的是 Hexo 静态博客，Next 主题。在这里 Hexo Next 就不做详细介绍了，官网地址戳这里 <a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">Hexo Next</a>官方网站对安装与配置进行了详细的介绍，包括站点配置主题配置，后面我针对需要的部分进行配置与说明。下面是我搭建的详细过程。废话不多说开干<del>~</del></h5><h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><h4 id="1-电脑以及拥有可用的系统，可上网，Windows、Linux、Mac-Os-都可以"><a href="#1-电脑以及拥有可用的系统，可上网，Windows、Linux、Mac-Os-都可以" class="headerlink" title="1.电脑以及拥有可用的系统，可上网，Windows、Linux、Mac Os 都可以"></a>1.电脑以及拥有可用的系统，可上网，Windows、Linux、Mac Os 都可以</h4><p>   <img src="/images%5C%E5%88%86%E4%BA%AB%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%BB%BA%E7%AB%99%E7%9A%84%E7%BB%8F%E5%8E%86%5C1.webp" alt="">   </p>
+<h4 id="2-Git客户端安装"><a href="#2-Git客户端安装" class="headerlink" title="2.Git客户端安装"></a>2.Git客户端安装</h4><p>   <img src="/images%5C%E5%88%86%E4%BA%AB%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%BB%BA%E7%AB%99%E7%9A%84%E7%BB%8F%E5%8E%86%5C2.webp" alt=""><br>    <img src="/images%5C%E5%88%86%E4%BA%AB%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%BB%BA%E7%AB%99%E7%9A%84%E7%BB%8F%E5%8E%86%5C4.webp" alt="">   </p>
+<h4 id="3-node客户端安装"><a href="#3-node客户端安装" class="headerlink" title="3.node客户端安装"></a>3.node客户端安装</h4><p>   <img src="/images%5C%E5%88%86%E4%BA%AB%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%BB%BA%E7%AB%99%E7%9A%84%E7%BB%8F%E5%8E%86%5C3.webp" alt="">   </p>
+<h4 id="4-远程代码仓库-Github、Coding都行，这里我选择Github"><a href="#4-远程代码仓库-Github、Coding都行，这里我选择Github" class="headerlink" title="4.远程代码仓库 Github、Coding都行，这里我选择Github"></a>4.远程代码仓库 Github、Coding都行，这里我选择Github</h4><p>   <img src="/images%5C%E5%88%86%E4%BA%AB%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%BB%BA%E7%AB%99%E7%9A%84%E7%BB%8F%E5%8E%86%5C8.png" alt="">   </p>
+<h4 id="5-准备一个可解析域名，我选择的是腾讯社区，是我之前买的好的域名。由于是境外网站所有国内是不需要备案的！"><a href="#5-准备一个可解析域名，我选择的是腾讯社区，是我之前买的好的域名。由于是境外网站所有国内是不需要备案的！" class="headerlink" title="5.准备一个可解析域名，我选择的是腾讯社区，是我之前买的好的域名。由于是境外网站所有国内是不需要备案的！"></a>5.准备一个可解析域名，我选择的是腾讯社区，是我之前买的好的域名。由于是境外网站所有国内是不需要备案的！</h4><p>   <img src="/images%5C%E5%88%86%E4%BA%AB%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%BB%BA%E7%AB%99%E7%9A%84%E7%BB%8F%E5%8E%86%5C9.png" alt="">   </p>
+<h2 id="开始安装hexo"><a href="#开始安装hexo" class="headerlink" title="开始安装hexo"></a>开始安装hexo</h2><p> <code>npm install hexo --save</code> </p>
+<h4 id="安装-Hexo-完成后，请执行下列命令，Hexo-将会在指定文件夹中新建所需要的文件。"><a href="#安装-Hexo-完成后，请执行下列命令，Hexo-将会在指定文件夹中新建所需要的文件。" class="headerlink" title="安装 Hexo 完成后，请执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件。"></a>安装 Hexo 完成后，请执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件。</h4><p>  <code>hexo init</code><br> <code>npm install</code> </p>
+<h4 id="新建完成后，指定文件夹的目录如下："><a href="#新建完成后，指定文件夹的目录如下：" class="headerlink" title="新建完成后，指定文件夹的目录如下："></a>新建完成后，指定文件夹的目录如下：</h4><p> <img src="/images%5C%E5%88%86%E4%BA%AB%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%BB%BA%E7%AB%99%E7%9A%84%E7%BB%8F%E5%8E%86%5C5.webp" alt="">  </p>
+<h4 id="这个时候你运行以下命令就可以看到博客框架已搭建起来了访问-博客主页。"><a href="#这个时候你运行以下命令就可以看到博客框架已搭建起来了访问-博客主页。" class="headerlink" title="这个时候你运行以下命令就可以看到博客框架已搭建起来了访问 博客主页。"></a>这个时候你运行以下命令就可以看到博客框架已搭建起来了访问 博客主页。</h4><p> <img src="/images%5C%E5%88%86%E4%BA%AB%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%BB%BA%E7%AB%99%E7%9A%84%E7%BB%8F%E5%8E%86%5C6.webp" alt="">  </p>
+<h2 id="next安装"><a href="#next安装" class="headerlink" title="next安装"></a>next安装</h2><h5 id="可以看到上面博客主题不是自己喜欢的样子，别着急，github上给我提供了很多主题样式，地址在这里，自己选择，配置大同小异，我选用next。在终端窗口下，定位到-Hexo-站点目录下。使用-Git-checkout-代码："><a href="#可以看到上面博客主题不是自己喜欢的样子，别着急，github上给我提供了很多主题样式，地址在这里，自己选择，配置大同小异，我选用next。在终端窗口下，定位到-Hexo-站点目录下。使用-Git-checkout-代码：" class="headerlink" title="可以看到上面博客主题不是自己喜欢的样子，别着急，github上给我提供了很多主题样式，地址在这里，自己选择，配置大同小异，我选用next。在终端窗口下，定位到 Hexo 站点目录下。使用 Git checkout 代码："></a>可以看到上面博客主题不是自己喜欢的样子，别着急，github上给我提供了很多主题样式，地址在这里，自己选择，配置大同小异，我选用next。在终端窗口下，定位到 Hexo 站点目录下。使用 Git checkout 代码：</h5><p>  <code>git clone https://github.com/iissnan/hexo-theme-next themes/next</code><br>  <img src="/images%5C%E5%88%86%E4%BA%AB%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%BB%BA%E7%AB%99%E7%9A%84%E7%BB%8F%E5%8E%86%5C7.webp" alt="">  </p>
+<h5 id="这时在本地终端上Ctrl-c，结束正在运行的进程，并修改站点配置文件主题为next重新执行上面的命令，可以看到成功的切换到了我们喜欢的主题了。"><a href="#这时在本地终端上Ctrl-c，结束正在运行的进程，并修改站点配置文件主题为next重新执行上面的命令，可以看到成功的切换到了我们喜欢的主题了。" class="headerlink" title="这时在本地终端上Ctrl+c，结束正在运行的进程，并修改站点配置文件主题为next重新执行上面的命令，可以看到成功的切换到了我们喜欢的主题了。"></a>这时在本地终端上Ctrl+c，结束正在运行的进程，并修改站点配置文件主题为next重新执行上面的命令，可以看到成功的切换到了我们喜欢的主题了。</h5>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>可怜可怜我这个穷人吧,大爷给点钱吧,混口饭吃!</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/alipay.png" alt="Liang Hao 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/wechatpay.jpg" alt="Liang Hao 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Liang Hao</p>
+              <p class="site-description motion-element" itemprop="description">这是我的个人博客网站</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%7C%7Carchive">
+              
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#搭建个人博客前面提到了有很多种，我采用的是-Hexo-静态博客，Next-主题。在这里-Hexo-Next-就不做详细介绍了，官网地址戳这里-Hexo-Next官方网站对安装与配置进行了详细的介绍，包括站点配置主题配置，后面我针对需要的部分进行配置与说明。下面是我搭建的详细过程。废话不多说开干"><span class="nav-number">1.</span> <span class="nav-text">搭建个人博客前面提到了有很多种，我采用的是 Hexo 静态博客，Next 主题。在这里 Hexo Next 就不做详细介绍了，官网地址戳这里 Hexo Next官方网站对安装与配置进行了详细的介绍，包括站点配置主题配置，后面我针对需要的部分进行配置与说明。下面是我搭建的详细过程。废话不多说开干~</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#准备工作"><span class="nav-number"></span> <span class="nav-text">准备工作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-电脑以及拥有可用的系统，可上网，Windows、Linux、Mac-Os-都可以"><span class="nav-number"></span> <span class="nav-text">1.电脑以及拥有可用的系统，可上网，Windows、Linux、Mac Os 都可以</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-Git客户端安装"><span class="nav-number"></span> <span class="nav-text">2.Git客户端安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-node客户端安装"><span class="nav-number"></span> <span class="nav-text">3.node客户端安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-远程代码仓库-Github、Coding都行，这里我选择Github"><span class="nav-number"></span> <span class="nav-text">4.远程代码仓库 Github、Coding都行，这里我选择Github</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-准备一个可解析域名，我选择的是腾讯社区，是我之前买的好的域名。由于是境外网站所有国内是不需要备案的！"><span class="nav-number"></span> <span class="nav-text">5.准备一个可解析域名，我选择的是腾讯社区，是我之前买的好的域名。由于是境外网站所有国内是不需要备案的！</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开始安装hexo"><span class="nav-number"></span> <span class="nav-text">开始安装hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-Hexo-完成后，请执行下列命令，Hexo-将会在指定文件夹中新建所需要的文件。"><span class="nav-number"></span> <span class="nav-text">安装 Hexo 完成后，请执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#新建完成后，指定文件夹的目录如下："><span class="nav-number"></span> <span class="nav-text">新建完成后，指定文件夹的目录如下：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#这个时候你运行以下命令就可以看到博客框架已搭建起来了访问-博客主页。"><span class="nav-number"></span> <span class="nav-text">这个时候你运行以下命令就可以看到博客框架已搭建起来了访问 博客主页。</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#next安装"><span class="nav-number"></span> <span class="nav-text">next安装</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#可以看到上面博客主题不是自己喜欢的样子，别着急，github上给我提供了很多主题样式，地址在这里，自己选择，配置大同小异，我选用next。在终端窗口下，定位到-Hexo-站点目录下。使用-Git-checkout-代码："><span class="nav-number">1.</span> <span class="nav-text">可以看到上面博客主题不是自己喜欢的样子，别着急，github上给我提供了很多主题样式，地址在这里，自己选择，配置大同小异，我选用next。在终端窗口下，定位到 Hexo 站点目录下。使用 Git checkout 代码：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#这时在本地终端上Ctrl-c，结束正在运行的进程，并修改站点配置文件主题为next重新执行上面的命令，可以看到成功的切换到了我们喜欢的主题了。"><span class="nav-number">2.</span> <span class="nav-text">这时在本地终端上Ctrl+c，结束正在运行的进程，并修改站点配置文件主题为next重新执行上面的命令，可以看到成功的切换到了我们喜欢的主题了。</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>   
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Liang Hao</span>
+
+  
+</div>
+
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  本站访客数:<span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: true,
+        notify: true,
+        appId: 'KWiVJ1wlhaKI9eKH97YkuuEp-gzGzoHsz',
+        appKey: 'BfMNgphbJqezTYSaYtb9eo7I',
+        placeholder: '快给我留言吧,(*❦ω❦)期待呦！',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
